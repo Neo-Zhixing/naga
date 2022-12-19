@@ -134,6 +134,7 @@ pub fn parse_type(type_name: &str) -> Option<Type> {
                     "2DArray" => (ImageDimension::D2, true, sampled(false)),
                     "2DMS" => (ImageDimension::D2, false, sampled(true)),
                     "2DMSArray" => (ImageDimension::D2, true, sampled(true)),
+                    "2DShadow" => (ImageDimension::D2, false, ImageClass::Depth { multi: false }),
                     "3D" => (ImageDimension::D3, false, sampled(false)),
                     "Cube" => (ImageDimension::Cube, false, sampled(false)),
                     "CubeArray" => (ImageDimension::Cube, true, sampled(false)),
